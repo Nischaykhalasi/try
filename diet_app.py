@@ -25,7 +25,7 @@ st.write("Choose an option below to proceed:")
 
 option = st.radio("Select an Option:", [
     "Preprocess Data",
-    "Calculate BMI & Calories"
+    "Calculate BMI & Calories",
     "Make a Prediction",
 ])
 
