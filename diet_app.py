@@ -47,9 +47,9 @@ if option == "Preprocess Data":
 if option == "Make a Prediction":
     st.subheader("Choose Prediction Model")
 
-    calories = st.number_input("Calories", min_value=float(X["Calories"].min()), max_value=float(X["Calories"].max()))
-    Proteins = st.number_input("Proteins", min_value=float(X["Proteins"].min()), max_value=float(X["Proteins"].max()))
-    Carbohydrates = st.number_input("Carbohydrates", min_value=float(X["Carbohydrates"].min()), max_value=float(X["Carbohydrates"].max()))
+    calories = st.number_input("Calories(values= 5-550)", min_value=float(X["Calories"].min()), max_value=float(X["Calories"].max()))
+    Proteins = st.number_input("Proteins(values= 1-10 )", min_value=float(X["Proteins"].min()), max_value=float(X["Proteins"].max()))
+    Carbohydrates = st.number_input("Carbohydrates(values = 0-100)", min_value=float(X["Carbohydrates"].min()), max_value=float(X["Carbohydrates"].max()))
     veg = st.radio("Veg (1 for Non-Veg, 0 for Veg)", [0, 1])
 
     input_features = np.array([[calories, Proteins, Carbohydrates, veg]])
